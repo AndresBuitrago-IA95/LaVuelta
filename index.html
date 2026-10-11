@@ -36,7 +36,7 @@
         <a href="#video">Mira el video</a>
         <a href="#menu">El menú</a>
         <a href="#combos">Combos</a>
-        <a class="nav-order" href="#pedir">Pide la tuya <span aria-hidden="true">↗</span></a>
+        <a class="nav-order" href="#carrito">Mi carrito <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
@@ -177,9 +177,9 @@
                   <span class="menu-price">$18.000</span>
                 </div>
                 <p>Carne desmechada, chicharrón, parmesano, salsa de tomate y puerro caramelizado.</p>
-                <a class="menu-order" data-product="El Parcero" href="#pedir">
-                  Pedir esta vuelta <span aria-hidden="true">↗</span>
-                </a>
+                <button class="menu-order" type="button" data-cart-product="El Parcero" data-cart-price="18000">
+                  Agregar al carrito <span aria-hidden="true">+</span>
+                </button>
               </div>
             </article>
 
@@ -195,9 +195,9 @@
                   <span class="menu-price">$14.000</span>
                 </div>
                 <p>Arequipe, queso mozzarella y fresas frescas. Dulce, cremosa y hecha para antojar.</p>
-                <a class="menu-order" data-product="La Ñapa" href="#pedir">
-                  Pedir esta vuelta <span aria-hidden="true">↗</span>
-                </a>
+                <button class="menu-order" type="button" data-cart-product="La Ñapa" data-cart-price="14000">
+                  Agregar al carrito <span aria-hidden="true">+</span>
+                </button>
               </div>
             </article>
           </div>
@@ -212,20 +212,42 @@
           <p>Una vuelta para ti o una para toda la mesa.</p>
         </div>
         <div class="combo-list">
-          <a class="combo-item" data-product="Combo Parche" href="#pedir">
+          <button class="combo-item" type="button" data-cart-product="Combo Parche" data-cart-price="34000">
             <span class="combo-index">01</span>
             <span class="combo-name"><strong>Combo Parche</strong><small>1 salada + 1 dulce + bebida</small></span>
             <span class="combo-price">$34.000</span>
-            <span class="combo-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="combo-item" data-product="Combo Familia" href="#pedir">
+            <span class="combo-arrow" aria-hidden="true">+</span>
+          </button>
+          <button class="combo-item" type="button" data-cart-product="Combo Familia" data-cart-price="58000">
             <span class="combo-index">02</span>
             <span class="combo-name"><strong>Combo Familia</strong><small>4 pizzas surtidas para compartir</small></span>
             <span class="combo-price">$58.000</span>
-            <span class="combo-arrow" aria-hidden="true">↗</span>
-          </a>
+            <span class="combo-arrow" aria-hidden="true">+</span>
+          </button>
         </div>
         <p class="combo-note"><span aria-hidden="true">🍕</span> El mejor ingrediente siempre es compartir.</p>
+      </section>
+
+      <section class="cart-section" id="carrito" aria-labelledby="cart-title">
+        <div class="cart-inner">
+          <div class="cart-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-line"></span> Tu pedido, a tu manera</p>
+              <h2 id="cart-title">Tu <em>carrito.</em></h2>
+            </div>
+            <p id="cart-status" role="status" aria-live="polite">Agrega pizzas o combos desde el menú.</p>
+          </div>
+          <p class="cart-empty" id="cart-empty">Todavía no tienes productos. ¡Elige tus favoritos!</p>
+          <ul class="cart-items" id="cart-items" aria-label="Productos en el carrito"></ul>
+          <div class="cart-summary">
+            <span><span id="cart-count">0</span> productos</span>
+            <strong>Total <span id="cart-total">$0</span></strong>
+          </div>
+          <button class="button button-primary cart-checkout" id="cart-checkout" type="button" disabled>
+            Enviar pedido por WhatsApp <span aria-hidden="true">↗</span>
+          </button>
+          <p class="cart-note">Revisaremos tu pedido contigo por WhatsApp antes de confirmarlo.</p>
+        </div>
       </section>
 
       <section class="order-section" id="pedir" aria-labelledby="order-title">
@@ -233,14 +255,9 @@
           <img class="order-logo" src="assets/logo-la-vuelta.jpg" alt="">
           <p class="eyebrow">¿Ya se te antojó?</p>
           <h2 id="order-title">Dale la vuelta<br><em>a tu antojo.</em></h2>
-          <p class="order-copy">Escríbenos y armamos una buena vuelta para ti.</p>
-          <a
-            class="button button-light whatsapp-link"
-            href="https://wa.me/573128503095?text=Hola%20La%20Vuelta%2C%20quiero%20hacer%20un%20pedido."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Pide por WhatsApp <span aria-hidden="true">↗</span>
+          <p class="order-copy">Arma tu pedido y envíanoslo para darle la vuelta juntos.</p>
+          <a class="button button-light" href="#carrito">
+            Ve a tu carrito <span aria-hidden="true">↗</span>
           </a>
           <span class="order-doodle order-doodle-left" aria-hidden="true">🍕</span>
           <span class="order-doodle order-doodle-right" aria-hidden="true">🍕</span>
