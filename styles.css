@@ -267,9 +267,10 @@ a {
   font-weight: 400;
 }
 
-.hero-note-star {
+.hero-note-pizza {
   color: var(--tomato);
-  font-size: 2rem;
+  font-family: var(--font-sans);
+  font-size: 1.65rem;
 }
 
 .hero-art {
@@ -342,11 +343,11 @@ a {
   font-style: italic;
 }
 
-.hero-sun {
+.hero-pizza {
   position: absolute;
   top: 10%;
   left: 4%;
-  color: var(--cheese);
+  font-family: var(--font-sans);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
 
@@ -381,9 +382,8 @@ a {
 }
 
 .ticker-track b {
-  color: var(--tomato);
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .video-section {
@@ -528,8 +528,9 @@ a {
   color: var(--cheese);
 }
 
-.caption-spark {
-  color: var(--cheese);
+.caption-pizza {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
 }
 
 .story-label {
@@ -886,9 +887,8 @@ a {
 
 .order-doodle {
   position: absolute;
-  color: var(--cheese);
-  font-family: var(--font-serif);
-  font-size: 4.5rem;
+  font-family: var(--font-sans);
+  font-size: 3rem;
 }
 
 .order-doodle-left {
@@ -1081,7 +1081,7 @@ a {
     width: 7.5rem;
   }
 
-  .hero-sun {
+  .hero-pizza {
     top: 5%;
     left: 4%;
   }
